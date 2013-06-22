@@ -3,8 +3,8 @@ COMPILEOPTS += -Wall
 COMPILEOPTS += -Werror
 
 LANGUAGES   += c
-COMPILER    += winegcc
-LINKER      += winegcc
+COMPILER    += pwinegcc
+LINKER      += pwinegcc
 
 BINARIES    += joystick_linux
 LINKOPTS    += -ldinput
