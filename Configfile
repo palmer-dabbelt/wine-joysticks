@@ -1,0 +1,24 @@
+LANGUAGES   += c
+COMPILEOPTS += -Wall
+COMPILEOPTS += -Werror
+
+LANGUAGES   += c
+COMPILER    += winegcc
+LINKER      += winegcc
+
+BINARIES    += joystick_linux
+LINKOPTS    += -ldinput
+LINKOPTS    += -ldinput8
+LINKOPTS    += -ldxguid
+SOURCES     += main.c
+
+LANGUAGES   += c
+COMPILER    += i686-pc-mingw32-gcc
+LINKER      += i686-pc-mingw32-gcc
+
+BINARIES    += joystick_win32.exe
+COMPILEOPTS += -Wno-poison-system-directories
+COMPILEOPTS += -I/usr/include/wine/windows
+LINKOPTS    += -ldinput8
+LINKOPTS    += -ldxguid
+SOURCES     += main.c
